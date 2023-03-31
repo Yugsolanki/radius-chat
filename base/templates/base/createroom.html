@@ -1,0 +1,30 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+
+<style>
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+    }
+</style>
+
+<form method="POST" action="">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="range" name="radius" id="radius" min="1" max="100">
+    <p id="radiusValue">Value: </p>
+    <input type="submit" value="Submit" >
+</form>
+
+<script>
+    const range = document.getElementById('radius');
+    const rangeValue = document.getElementById('radiusValue');
+    range.addEventListener('input', function() {
+    rangeValue.textContent = range.value;
+    });
+</script>
+{% endblock content %}
