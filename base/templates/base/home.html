@@ -2,20 +2,23 @@
 {% load static %}
 {% block content %}
 
-<style>
-  .home-container {
-      display: grid;
-      grid-template-columns: 1fr 3fr;
-  }
-
-</style>
-
 <div class="home-container">
+
+  {% block room_list %}
   <div class="rooms-list">
-    
+    <button><a href="{% url 'createroom' %}">Create Room</a></button>
+    {% for room in rooms %}
+        <div class="room">
+        <a href="{% url 'room' room.id %}">{{room.name}}</a>
+        </div>
+    {% endfor %}
   </div>
-  <div class="room">
+  {% endblock %}
+
+  <div>
+    {% block room %}{% endblock %}
   </div>
+  
 </div>
 
 {% endblock content %}
