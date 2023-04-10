@@ -1,16 +1,57 @@
 {% load static %}
 
-<nav class="nav-container">
-    <div class="nav-brand">
-      <a href="{% url 'home' %}">Radius Chat</a>
-    </div>
-    <div class="nav-links">
-      <a href="{% url 'home' %}">Home</a>
-      {% if request.user.is_authenticated %}
-        <a href="{% url 'logout' %}">Logout</a>
-      {% else %}
-        <a href="{% url 'login' %}">Login</a>
-        <a href="{% url 'register' %}">Register</a>
-      {% endif %}
-    </div>
-</nav>
+
+<button data-drawer-target="logo-sidebar" data-drawer-toggle="logo-sidebar" aria-controls="logo-sidebar" type="button" class="inline-flex items-center p-2 mt-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
+  <span class="sr-only">Open sidebar</span>
+  <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+     <path clip-rule="evenodd" fill-rule="evenodd" d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"></path>
+  </svg>
+</button>
+
+<aside id="logo-sidebar" class="fixed drop-shadow-2xl top-0 left-0 z-40 w-fit1 h-screen transition-transform -translate-x-full sm:translate-x-0" aria-label="Sidebar">
+  <div class="h-full px-4 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800 align-middle">
+     <a href="https://flowbite.com/" class="flex items-center justify-center mb-5">
+        <img src="https://flowbite.com/docs/images/logo.svg" class="h-6 sm:h-7" alt="Flowbite Logo" />
+        <!-- <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Radius Chat</span> -->
+     </a>
+     <ul class="space-y-2 flex flex-col gap-10 font-medium mt-16">
+        <li>
+           <a href="{% url 'home' %}" class="flex py-2 items-center justify-center text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+              <i class="fa-sharp fa-solid fa-house fa-lg" style="color: #6b7280"></i>
+              <!-- <span class="ml-3">Dashboard</span> -->
+           </a>
+        </li>
+        <li>
+            <a href="{% url 'home' %}" class="flex py-2 items-center justify-center text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+              <i class="fa-sharp fa-solid fa-users fa-lg" style="color: #6b7280"></i>
+              <!-- <span class="ml-3">Dashboard</span> -->
+            </a>
+        </li>
+        <li>
+          <a href="{% url 'home' %}" class="flex py-2 items-center justify-center text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+             <i class="fa-sharp fa-solid fa-comment-alt fa-lg" style="color: #6b7280"></i>
+             <!-- <span class="ml-3">Dashboard</span> -->
+          </a>
+        </li>
+        <li>
+          <a href="{% url 'home' %}" class="flex py-2 items-center justify-center text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+             <i class="fa-sharp fa-solid fa-cog fa-lg" style="color: #6b7280"></i>
+             <!-- <span class="ml-3">Dashboard</span> -->
+          </a>
+        </li>
+        <li>
+          {% if request.user.is_authenticated %}
+          <a href="{% url 'logout' %}" class="flex py-2 items-center justify-center text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+            <i class="fa-sharp fa-solid fa-sign-in fa-lg fa-flip-horizontal" style="color: #6b7280"></i>
+             <!-- <span class="ml-3">Dashboard</span> -->
+          </a>
+          {% else %}
+          <a href="{% url 'login' %}" class="flex py-2 items-center justify-center text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+            <i class="fa-sharp fa-solid fa-sign-in fa-lg" style="color: #6b7280"></i>
+            <!-- <span class="ml-3">Dashboard</span> -->
+          </a>
+          {% endif %}
+        </li>
+     </ul>
+  </div>
+</aside>

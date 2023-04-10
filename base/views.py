@@ -69,9 +69,9 @@ def loginUser(request):
             user = User.objects.get(username=username)
         except:
             messages.error(request, 'User does not exist')
-
+            
         user = authenticate(request, username=username, password=password)
-
+        
         if user is not None:
             login(request, user)
             return redirect('home')
@@ -86,17 +86,21 @@ def logoutUser(request):
     return redirect('home')
 
 def register(request):
+    newUser = None
     form = MyUserCreationForm()
     if request.method == 'POST':
-        form = MyUserCreationForm(request.POST)
-        if form.is_valid():
-            user = form.save(commit=False)
-            user.username = user.username.lower()
-            user.location = getLocation()
-            user.save()
-            return redirect('home')
-        else:
-            messages.error(request, 'An error occurred during registration')
+        if (request.POST.get('password1') != request.POST.get('password2')):
+            messages.error(request, 'Passwords do not match')
+            return redirect('register')
+        else :
+            newUser = User.objects.create(
+                name = request.POST.get('name'),
+                username=request.POST.get('username').lower(),
+                email = request.POST.get('email'),
+                password = request.POST.get('password1'),
+                location = getLocation()
+            )
+            redirect('login')
     context = {'form': form}
     return render(request, 'base/login_register.html', context)
 

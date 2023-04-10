@@ -1,22 +1,44 @@
-<!DOCTYPE html>
+{% load compress %}
 {% load static %}
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=.0">
     <title>Radius Chat</title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="preconnect" href="https://fonts.gstatic.com/">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700%7cPoppins:300,400,500,600,700,800,900&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/app.css' %}">
+    <!-- <script src="{% static 'js/config.js' %}"></script>
+    <script src="{% static 'vendors/overlayscrollbars/OverlayScrollbars.min.js' %}"></script>
+    <link href="{% static 'vendors/overlayscrollbars/OverlayScrollbars.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/theme-rtl.min.css' %}" rel="stylesheet" id="style-rtl">
+    <link href="{% static 'css/theme.min.css' %}" rel="stylesheet" id="style-default">
+    <link href="{% static 'css/user-rtl.min.css' %}" rel="stylesheet" id="user-style-rtl">
+    <link href="{% static 'css/user.min.css' %}" rel="stylesheet" id="user-style-default"> -->
 </head>
 <body>
 
     {% include 'navbar.html' %}
 
-    <main>
+    <main class="sm:ml-14">
         {% block content %}
     
         {% endblock %}
     </main>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
+    <!-- <script src="{% static 'vendors/popper/popper.min.js' %}"></script>
+    <script src="{% static 'vendors/bootstrap/bootstrap.min.js' %}"></script>
+    <script src="{% static 'vendors/anchorjs/anchor.min.js' %}"></script>
+    <script src="{% static 'vendors/is/is.min.js' %}"></script>
+    <script src="{% static 'vendors/echarts/echarts.min.js' %}"></script>
+    <script src="{% static 'vendors/fontawesome/all.min.js' %}"></script>
+    <script src="{% static 'vendors/lodash/lodash.min.js' %}"></script>
+    <!-- <script src="../../../polyfill.io/v3/polyfill.min58be.js?features=window.scroll"></script> -->
+    <!-- <script src="{% static 'vendors/list.js/list.min.js' %}"></script>
+    <script src="{% static 'js/theme.js' %}"></script> -->
 </body>
 </html>

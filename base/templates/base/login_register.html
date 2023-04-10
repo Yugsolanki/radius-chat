@@ -3,23 +3,55 @@
 {% block content %}
 
 {% if page == 'login' %}
-<form action="" method="POST">
-    {% csrf_token %}
-
-    <label>Username:</label>
-    <input type="text" name="username" placeholder="Enter Username" />
-
-    <label>Password:</label>
-    <input type="password" name="password" placeholder="Enter Password" />
-
-    <input type="submit" value="Log In"/>
-</form>
+<div class="col-12 mb-3">
+    <div class="card">
+        <div class="card-header bg-circle-shape bg-shape text-center p-2"><a class="font-sans-serif fw-bolder fs-4 z-index-1 position-relative link-light light" href="index.html">falcon</a></div>
+        <div class="card-body p-4">
+            <div class="row flex-between-center">
+                <div class="col-auto">
+                    <h3>Login</h3>
+                </div>
+                <div class="col-auto fs--1 text-600"><span class="mb-0 fw-semi-bold">New User?</span> <span><a href="{% url 'register' %}">Create account</a></span></div>
+            </div>
+            <form action="" method="POST">
+                {% csrf_token %}
+                <div class="mb-3"><label class="form-label" for="split-login-email">Username</label><input class="form-control" name="username" id="split-login-email" type="text" /></div>
+                <div class="mb-3">
+                    <div class="d-flex justify-content-between"><label class="form-label" for="split-login-password">Password</label></div><input class="form-control" name="password" id="split-login-password" type="password" />
+                </div>
+                <div class="row flex-between-center">
+                    <div class="col-auto"><a class="fs--1" href="/">Forgot Password?</a></div>
+                </div>
+                <div class="mb-3"><button class="btn btn-primary d-block w-100 mt-3" type="submit" name="submit">Log in</button></div>
+            </form>
+            </div>
+        </div>
+    </div>
+</div>
 {% else %}
-<form action="" method="POST">
-    {% csrf_token %}
-    {{form.as_p}}
-    <input type="submit" value="Submit"/>
-</form>
+<div class="col-12 mb-3">
+    <div class="card h-lg-100">
+        <div class="card-body p-4 p-sm-5">
+            <div class="row flex-between-center mb-2">
+                <div class="col-auto">
+                    <h5>Register</h5>
+                </div>
+                <div class="col-auto fs--1 text-600"><span class="mb-0 undefined">Have an account?</span> <span><a href="{% url 'login' %}">Login</a></span></div>
+            </div>
+            <form action="" method="POST">
+                {% csrf_token %}
+                <div class="mb-3"><input class="form-control" name="name" type="text" autocomplete="on" placeholder="Name" /></div>
+                <div class="mb-3"><input class="form-control" name="username" type="text" autocomplete="on" placeholder="Username" /></div>
+                <div class="mb-3"><input class="form-control" name="email" type="email" autocomplete="on" placeholder="Email address" /></div>
+                <div class="row gx-2">
+                    <div class="mb-3 col-sm-6"><input class="form-control" name="password1" type="password" autocomplete="on" placeholder="Password" /></div>
+                    <div class="mb-3 col-sm-6"><input class="form-control" name="password2" type="password" autocomplete="on" placeholder="Confirm Password" /></div>
+                </div>
+                <div class="mb-3"><button class="btn btn-primary d-block w-100 mt-3" type="submit" name="submit">Register</button></div>
+            </form>
+        </div>
+    </div>
+</div>
 {% endif %}
 
 {% endblock content %}
