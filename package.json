@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "dev": "tailwindcss -i static/css/_tailwind.css -o static/css/app.css --watch"
+    "dev": "tailwindcss -i static/base/css/_tailwind.css -o static/base/css/app.css --watch"
   },
   "devDependencies": {
     "tailwindcss": "^3.3.1"

@@ -7,8 +7,21 @@ from .models import Room, Message, User, Location
 from .forms import RoomForm, MyUserCreationForm, UserForm
 import geocoder
 from math import sin, cos, sqrt, atan2, radians
+from django.contrib.auth.hashers import make_password
 # from background_task import background
 # from datetime import timedelta
+import random
+
+history = set()
+
+def generate_random_number(min,max,max_history_length):
+    while True:
+        random_number = random.randint(min, max)  
+        if random_number not in history:  
+            history.add(random_number)  
+            if len(history) > max_history_length:  
+                history.remove(random.sample(history, 1)[0])  
+            return random_number
 
 def getLocation():
     g = geocoder.ip('me')
@@ -74,9 +87,10 @@ def loginUser(request):
         
         if user is not None:
             login(request, user)
+            updateUserLocation(request)
             return redirect('home')
         else:
-            messages.error(request, 'Username OR password does not exit')
+            messages.error(request, 'Username OR Password does not exit')
 
     context = {'page': page}
     return render(request, 'base/login_register.html', context)
@@ -97,7 +111,7 @@ def register(request):
                 name = request.POST.get('name'),
                 username=request.POST.get('username').lower(),
                 email = request.POST.get('email'),
-                password = request.POST.get('password1'),
+                password = make_password(request.POST.get('password1')),
                 location = getLocation()
             )
             redirect('login')
@@ -110,6 +124,15 @@ def room(request, pk):
         rooms = getRooms(request)
     room = Room.objects.get(id=pk)
     room_messages = room.message_set.all()
+    messages_with_prev = []
+    prev_message = None
+    for message in room_messages:
+        message_with_prev = {
+            'message': message,
+            'prev_message': prev_message
+        }
+        messages_with_prev.append(message_with_prev)
+        prev_message = message
     participants = room.participants.all()
 
     if request.method == 'POST':
@@ -121,7 +144,7 @@ def room(request, pk):
         room.participants.add(request.user)
         return redirect('room', pk=room.id)
 
-    context = {'room': room, 'room_messages': room_messages,
+    context = {'room': room, 'room_messages': messages_with_prev,
                'participants': participants, 'rooms': rooms}
     return render(request, 'base/room.html', context)
 
