@@ -22,7 +22,7 @@ a location based chat app</h3>
   </p>
 </p>
 
-![Downloads](https://img.shields.io/github/downloads/Yugsolanki/Radiuschat/total) ![Contributors](https://img.shields.io/github/contributors/Yugsolanki/Radiuschat?color=dark-green) ![Forks](https://img.shields.io/github/forks/Yugsolanki/Radiuschat?style=social) ![Stargazers](https://img.shields.io/github/stars/Yugsolanki/Radiuschat?style=social) ![Issues](https://img.shields.io/github/issues/Yugsolanki/Radiuschat) ![License](https://img.shields.io/github/license/Yugsolanki/Radiuschat) 
+![Downloads](https://img.shields.io/github/downloads/Yugsolanki/radius-chat/total) ![Contributors](https://img.shields.io/github/contributors/Yugsolanki/radius-chat?color=dark-green) ![Forks](https://img.shields.io/github/forks/Yugsolanki/radius-chat?style=social) ![Stargazers](https://img.shields.io/github/stars/Yugsolanki/radius-chat?style=social) ![Issues](https://img.shields.io/github/issues/Yugsolanki/radius-chat) ![License](https://img.shields.io/github/license/Yugsolanki/radius-chat) 
 
 ## Table Of Contents
 
