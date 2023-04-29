@@ -22,9 +22,9 @@ a location based chat app</h3>
   </p>
 </p>
 
-![Downloads](https://img.shields.io/github/downloads/Yugsolanki/Radiuschat/total) ![Contributors](https://img.shields.io/github/contributors/Yugsolanki/Radiuschat?color=dark-green) ![Forks](https://img.shields.io/github/forks/Yugsolanki/Radiuschat?style=social) ![Stargazers](https://img.shields.io/github/stars/Yugsolanki/Radiuschat?style=social) ![Issues](https://img.shields.io/github/issues/Yugsolanki/Radiuschat) ![License](https://img.shields.io/github/license/Yugsolanki/Radiuschat) 
-
-## Table Of Contents
+![Downloads](https://img.shields.io/github/downloads/Yugsolanki/radius-chat/total) ![Contributors](https://img.shields.io/github/contributors/Yugsolanki/radius-chat?color=dark-green) ![Forks](https://img.shields.io/github/forks/Yugsolanki/radius-chat?style=social) ![Stargazers](https://img.shields.io/github/stars/Yugsolanki/radius-chat?style=social) ![Issues](https://img.shields.io/github/issues/Yugsolanki/radius-chat) ![License](https://img.shields.io/github/license/Yugsolanki/radius-chat) 
+<br/><br/>
+## 🖼️ Table Of Contents
 
 * [About the Project](#about-the-project)
 * [Built With](#built-with)
@@ -37,10 +37,10 @@ a location based chat app</h3>
 * [License](#license)
 * [Authors](#authors)
 * [Acknowledgements](#acknowledgements)
+<br/><br/>
+## 🎐 About The Project
 
-## About The Project
-
-![Screen Shot](images/screenshot.png)
+![Screen Shot](static/images/screenshot.png)
 
 The aim of this project is to create a location-based chat app that enables users to connect with others who are within a certain geographical radius. The app will allow users to create chat rooms that are restricted to people within a specific location, providing a more relevant and private chat experience.
 
@@ -48,8 +48,8 @@ The aim of this project is to create a location-based chat app that enables user
 * The app will be developed using django and tailwind and best practices and will be optimized for mobile devices.
 * Developers of all skill levels are welcome to contribute to the project.
 The "Radiuschat" project aims to create a unique and valuable location-based chat app for users worldwide.
-
-## Built With
+<br/><br/>
+## 👷 Built With
 
 This project was built using:
 
@@ -57,12 +57,12 @@ This project was built using:
 * Tailwind: a utility-first CSS framework for quickly building custom designs.
 * Flowbite: a Tailwind CSS UI kit for creating responsive web applications.
 * Geocoder: a Python library for getting user location data based on IP addresses.
-
-## Getting Started
+<br/><br/>
+## 🎍 Getting Started
 
 To get started with the "Radiuschat" app, simply clone this repository to your local machine and follow the installation instructions. Once the app is installed, you can create an account, set your location, and start chatting with people in your area.
 
-### Prerequisites
+### 📌 Prerequisites
 
 Before installing the "Radiuschat" app, make sure you have the following prerequisites installed on your machine:
 
@@ -74,7 +74,7 @@ If you do not have Python, Node.js and NPM installed, you can download them from
 https://www.python.org/downloads/
 https://nodejs.org/en/download
 
-### Installation
+### ⚙️ Installation
 
 To install the "Radiuschat" app, follow these steps:
 
@@ -113,8 +113,8 @@ python manage.py runserver
 ```
 
 9. That's it! You should now be able to access the "Radiuschat" app in your web browser at http://127.0.0.1:8000/.
-
-## Usage
+<br/><br/>
+## ✅ Usage
 
 1. Sign up for an account by providing your email address, username, name and creating a password.
 2. The app stores your ip address for identifing your location.
@@ -124,12 +124,12 @@ python manage.py runserver
 6. Leave the chat room by clicking the "Leave Room" button.
 7.You can also create your own chat room by clicking the "Create Room" button and setting the room name, location radius, and access type. 
 8. Only users who are located within the specified radius and have been granted access to the room will be able to join and participate in the chat.
-
-## Roadmap
+<br/><br/>
+## 🗺️ Roadmap
 
 See the [open issues](https://github.com/Yugsolanki/Radiuschat/issues) for a list of proposed features (and known issues).
-
-## Contributing
+<br/><br/>
+## 🤝 Contributing
 
 Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 * If you have suggestions for adding or removing projects, feel free to [open an issue](https://github.com/Yugsolanki/Radiuschat/issues/new) to discuss it, or directly create a pull request after you edit the *README.md* file with necessary changes.
@@ -137,22 +137,22 @@ Contributions are what make the open source community such an amazing place to b
 * Create individual PR for each suggestion.
 * Please also read through the [Code Of Conduct](https://github.com/Yugsolanki/Radiuschat/blob/main/CODE_OF_CONDUCT.md) before posting your first idea as well.
 
-### Creating A Pull Request
+### ✅ Creating A Pull Request
 
 1. Fork the Project
 2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
 3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
-
-## License
+<br/><br/>
+## 📃 License
 
 Distributed under the MIT License. See [LICENSE](https://github.com/Yugsolanki/Radiuschat/blob/main/LICENSE.md) for more information.
-
-## Authors
+<br/><br/>
+## ✍️ Authors
 
 * **Yug Solanki** - *Comp Science Student* - [Yug Solanki](https://github.com/Yugsolanki) - *Built ReadME Template*
-
-## Acknowledgements
+<br/><br/>
+## 👍 Acknowledgements
 
 * [Django Course : Traverse Media](https://youtu.be/PtQiiknWUcI)
