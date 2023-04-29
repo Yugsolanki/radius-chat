@@ -1,7 +1,7 @@
 <br/>
 <p align="center">
-  <a href="https://github.com/Yugsolanki/Radiuschat">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+  <a href="https://github.com/Yugsolanki/radius-chat">
+    <img src="images/logo.png" alt="Logo" height="100">
   </a>
 
   <h3 align="center">Radiuschat - 
@@ -11,14 +11,14 @@ a location based chat app</h3>
     Connect locally, chat globally with Radiuschat
     <br/>
     <br/>
-    <a href="https://github.com/Yugsolanki/Radiuschat"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/Yugsolanki/radius-chat"><strong>Explore the docs »</strong></a>
     <br/>
     <br/>
-    <a href="https://github.com/Yugsolanki/Radiuschat">View Demo</a>
+    <a href="https://github.com/Yugsolanki/radius-chat">View Demo</a>
     .
-    <a href="https://github.com/Yugsolanki/Radiuschat/issues">Report Bug</a>
+    <a href="https://github.com/Yugsolanki/radius-chat/issues">Report Bug</a>
     .
-    <a href="https://github.com/Yugsolanki/Radiuschat/issues">Request Feature</a>
+    <a href="https://github.com/Yugsolanki/radius-chat/issues">Request Feature</a>
   </p>
 </p>
 
@@ -40,7 +40,7 @@ a location based chat app</h3>
 <br/><br/>
 ## 🎐 About The Project
 
-![Screen Shot](static/images/screenshot.png)
+![Screen Shot](images/screenshot.png)
 
 The aim of this project is to create a location-based chat app that enables users to connect with others who are within a certain geographical radius. The app will allow users to create chat rooms that are restricted to people within a specific location, providing a more relevant and private chat experience.
 
@@ -61,7 +61,7 @@ This project was built using:
 ## 🎍 Getting Started
 
 To get started with the "Radiuschat" app, simply clone this repository to your local machine and follow the installation instructions. Once the app is installed, you can create an account, set your location, and start chatting with people in your area.
-
+<br/>
 ### 📌 Prerequisites
 
 Before installing the "Radiuschat" app, make sure you have the following prerequisites installed on your machine:
@@ -71,9 +71,11 @@ Before installing the "Radiuschat" app, make sure you have the following prerequ
     Node.js and NPM (for Tailwind and Flowbite)
 
 If you do not have Python, Node.js and NPM installed, you can download them from their official website: 
+<br>
 https://www.python.org/downloads/
+<br/>
 https://nodejs.org/en/download
-
+<br/>
 ### ⚙️ Installation
 
 To install the "Radiuschat" app, follow these steps:
@@ -127,15 +129,15 @@ python manage.py runserver
 <br/><br/>
 ## 🗺️ Roadmap
 
-See the [open issues](https://github.com/Yugsolanki/Radiuschat/issues) for a list of proposed features (and known issues).
+See the [open issues](https://github.com/Yugsolanki/radius-chat/issues) for a list of proposed features (and known issues).
 <br/><br/>
 ## 🤝 Contributing
 
 Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-* If you have suggestions for adding or removing projects, feel free to [open an issue](https://github.com/Yugsolanki/Radiuschat/issues/new) to discuss it, or directly create a pull request after you edit the *README.md* file with necessary changes.
+* If you have suggestions for adding or removing projects, feel free to [open an issue](https://github.com/Yugsolanki/radius-chat/issues/new) to discuss it, or directly create a pull request after you edit the *README.md* file with necessary changes.
 * Please make sure you check your spelling and grammar.
 * Create individual PR for each suggestion.
-* Please also read through the [Code Of Conduct](https://github.com/Yugsolanki/Radiuschat/blob/main/CODE_OF_CONDUCT.md) before posting your first idea as well.
+* Please also read through the [Code Of Conduct](https://github.com/Yugsolanki/radius-chat/blob/main/CODE_OF_CONDUCT.md) before posting your first idea as well.
 
 ### ✅ Creating A Pull Request
 
@@ -147,11 +149,11 @@ Contributions are what make the open source community such an amazing place to b
 <br/><br/>
 ## 📃 License
 
-Distributed under the MIT License. See [LICENSE](https://github.com/Yugsolanki/Radiuschat/blob/main/LICENSE.md) for more information.
+Distributed under the MIT License. See [LICENSE](https://github.com/Yugsolanki/radius-chat/blob/main/LICENSE.md) for more information.
 <br/><br/>
 ## ✍️ Authors
 
-* **Yug Solanki** - *Comp Science Student* - [Yug Solanki](https://github.com/Yugsolanki) - *Built ReadME Template*
+* **Yug Solanki** - *Comp Science Student* - [Yug Solanki](https://github.com/Yugsolanki)
 <br/><br/>
 ## 👍 Acknowledgements
 
